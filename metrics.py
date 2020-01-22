@@ -152,18 +152,6 @@ def dc(input1, input2):
 
 
 
-if __name__ == "__main__":
-    pred_dir='./pp.nrrd'
-    gt_dir="./gt.nrrd"
-    pred,h=nrrd.read(pred_dir)
-    print(pred.shape)
-    gt,h=nrrd.read(gt_dir)
-    hdorff=hd(pred,gt)
-    dsc=dc(pred,gt)
-    #print(hdorff)
-    print(dsc)
-
-
 
 
 if __name__ == "__main__":
@@ -179,6 +167,7 @@ if __name__ == "__main__":
         gt,hg=nrrd.read(gt_list[i])
         # hausdorff distance
         hdorff=hd(pred,gt)
+        # dsc
         dsc=dc(pred,gt)
 
 
